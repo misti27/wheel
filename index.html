@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SYNTHWAVE FATE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Noto Sans SC', sans-serif;
+        background-color: #0b0d1e; /* Deep Synthwave Purple */
+        color: #e0e7ff;
+      }
+      h1, h2, h3, button, .font-cyber {
+        font-family: 'Orbitron', sans-serif;
+      }
+      /* Synthwave Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0b0d1e; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2d1b4e; 
+        border: 1px solid #4cc9f0;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4cc9f0; 
+      }
+      .synth-grid {
+        background-image: 
+          linear-gradient(rgba(76, 201, 240, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(76, 201, 240, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .neon-box {
+        box-shadow: 0 0 10px rgba(76, 201, 240, 0.2), inset 0 0 20px rgba(76, 201, 240, 0.05);
+      }
+      .text-glow {
+        text-shadow: 0 0 10px currentColor;
+      }
+      
+      /* 3D Flip Animation for Congratulations Text */
+      @keyframes flip-3d {
+        0% { transform: perspective(1000px) rotateX(0deg); }
+        100% { transform: perspective(1000px) rotateX(360deg); }
+      }
+      .animate-flip-3d {
+        animation: flip-3d 3s linear infinite;
+        transform-style: preserve-3d;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "d3-shape": "https://esm.sh/d3-shape@^3.2.0"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-[#0b0d1e] text-white overflow-hidden synth-grid">
+    <div id="root"></div>
+  </body>
+</html>
